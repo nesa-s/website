@@ -1,34 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+
+import Umich from './umich/App'
+import Learn from './learn/App'
+import Grow from './grow/App'
+import Build from './build/App'
+
+function Home() {
+  return (
+    <div>
+      <h1>nesa shamdasani</h1>
+      <h2>trying to <Link to="/learn">learn</Link>, <Link to="/build">build</Link>, and <Link to="/grow">grow</Link> @ <Link to="/umich">university of michigan</Link></h2>
+    </div>
+  )
+}
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/umich" element={<Umich />} />
+        <Route path="/learn" element={<Learn />} />
+        <Route path="/grow" element={<Grow />} />
+        <Route path="/build" element={<Build />} />
+      
+      </Routes>
+    </Router>
   )
 }
 
