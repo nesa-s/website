@@ -1,19 +1,21 @@
-import './App.css'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-import Umich from './umich/App'
-import Learn from './learn/App'
-import Grow from './grow/App'
-import Build from './build/App'
+import Umich from './umich/App';
+import Learn from './learn/App';
+import Grow from './grow/App';
+import Build from './build/App';
 
+import { BackgroundPaths } from './components/ui/background-paths'; 
+      
 function Home() {
   return (
-    <div>
-      <h1>nesa shamdasani</h1>
-      <h2>trying to <Link to="/learn">learn</Link>, <Link to="/build">build</Link>, and <Link to="/grow">grow</Link> @ <Link to="/umich">university of michigan</Link></h2>
-    </div>
-  )
+    <BackgroundPaths title="nesashamdasani" />
+  );
+
+  
 }
+
 
 function App() {
   return (
@@ -24,10 +26,9 @@ function App() {
         <Route path="/learn" element={<Learn />} />
         <Route path="/grow" element={<Grow />} />
         <Route path="/build" element={<Build />} />
-      
       </Routes>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

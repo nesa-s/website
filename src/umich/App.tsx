@@ -4,6 +4,7 @@ function App() {
     return (
     <div>
       <Link to="/">← back</Link>
+      <h1>B.S.E. in Computer Science & Biomedical Engineering</h1>
       <h1>coursework</h1>
       <h4>(some fun, some not so fun)</h4>
       <ul>
@@ -14,6 +15,7 @@ function App() {
         <li>Piano 110: Introduction to Music Theory</li>
         <li>ENTR 407: Entrepreneurship Hour with Center for Entrepreneurship</li>
       </ul>
+
       <h1>Engagements</h1>
       <h4>(all fun)</h4>
       <ul>
