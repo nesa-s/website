@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -37,6 +37,8 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.025em;
 }
 
 @media (prefers-color-scheme: light) {
