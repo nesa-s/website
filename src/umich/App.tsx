@@ -9,7 +9,7 @@ function App() {
       transition={{ duration: 0.5 }}
       className="min-h-screen px-6 py-10 bg-white"
     >
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl">
         <Link to="/" className="text-gray-500 hover:text-gray-700 transition-colors inline-block mb-8">
           ← back
         </Link>
